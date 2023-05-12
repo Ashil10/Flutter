@@ -12,9 +12,33 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Home"),
-      ),
+        appBar: AppBar(
+            title: Text("Home"),
+            actions: [
+              PopupMenuButton(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(10))
+                ),
+                itemBuilder: (context) => [
+                  PopupMenuItem(child:
+                  Row(
+                    children: [
+                      Icon(Icons.search,color:Colors.black,),
+                      Text('search'),
+                    ],
+                  )),
+                  PopupMenuItem(child:
+                  Row(
+                    children: [
+                      Icon(Icons.upload,color: Colors.black),
+                      Text('upload'),
+    ],
+    ))
+    ],)
+    ],
+
+    ),
+
     );
   }
 }
